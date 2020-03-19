@@ -1,0 +1,40 @@
+{
+  "name": "mderakhshi/laravel-activity-log",
+  "description": "Custom PHP activity log library for the Laravel 7",
+  "version": "dev-master",
+  "keywords": [
+    "mderakhshi",
+    "masoud_derakhshi",
+    "Laravel",
+    "activity log"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "masoud derakhshi",
+      "email": "mderakhshi1992@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "illuminate/support": ">=4.0",
+    "jenssegers/mongodb": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "mderakhshi\\ActivityLog\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "mderakhshi\\ActivityLog\\CurlServiceProvider"
+      ],
+      "aliases": {
+        "Curl": "mderakhshi\\ActivityLog\\Facades\\Curl"
+      }
+    }
+  }
+}
