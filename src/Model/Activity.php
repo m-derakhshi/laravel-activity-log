@@ -3,10 +3,10 @@
 
 namespace mderakhshi\ActivityLog\Model;
 
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Model;
 
 
-class Activity extends Eloquent
+class Activity extends Model
 {
 	public    $timestamps = false;
 	protected $connection = 'mongodb';
