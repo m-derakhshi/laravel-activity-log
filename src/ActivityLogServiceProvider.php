@@ -1,8 +1,7 @@
-<?php namespace mderakhshi\Curl;
+<?php namespace mderakhshi\ActivityLog;
 
 
 use Illuminate\Support\ServiceProvider;
-use mderakhshi\ActivityLog;
 
 class ActivityLogServiceProvider extends ServiceProvider {
 
