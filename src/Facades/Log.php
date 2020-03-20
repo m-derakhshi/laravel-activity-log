@@ -1,4 +1,4 @@
-<?php namespace mderakhshi\Curl\Facades;
+<?php namespace mderakhshi\ActivityLog\Facades;
 
 
 use Illuminate\Support\Facades\Facade;

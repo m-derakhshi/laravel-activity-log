@@ -31,10 +31,7 @@
     "laravel": {
       "providers": [
         "mderakhshi\\ActivityLog\\ActivityLogServiceProvider"
-      ],
-      "aliases": {
-        "Curl": "mderakhshi\\ActivityLog\\Facades\\Log"
-      }
+      ]
     }
   }
 }
