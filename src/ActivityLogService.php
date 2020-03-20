@@ -16,7 +16,7 @@ class ActivityLogService {
 		$collectionName       = $method;
 		$prefixCollectionName = trim(config('activitylog.prefix_log_table', null), '_');
 		if (!empty($prefixCollectionName)) {
-			$collectionName = $prefixCollectionName.$collectionName;
+			$collectionName = $prefixCollectionName.'_'.$collectionName;
 		}
 		$collectionName = Str::snake($collectionName);
 		
