@@ -9,7 +9,14 @@ class ActivityLogServiceProvider extends ServiceProvider {
      * @var bool
      */
     protected $defer = true;
-
+	
+	public function boot()
+	{
+		$this->publishes([
+			                 __DIR__.'/../config/activitylog.php' => config_path('activitylog.php'),
+		                 ], 'config');
+		
+	}
 
     /**
      * @return void
