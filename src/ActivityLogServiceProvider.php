@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\ServiceProvider;
-use mderakhshi\ActivityLog\ActivityLogService;
+use mderakhshi\ActivityLog;
 
 class ActivityLogServiceProvider extends ServiceProvider {
 
