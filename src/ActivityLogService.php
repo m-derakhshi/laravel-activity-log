@@ -19,6 +19,7 @@ class ActivityLogService {
 			$collectionName = $prefixCollectionName.'_'.$collectionName;
 		}
 		$collectionName = Str::snake($collectionName);
+		$collectionName = str_replace('__', '_', $collectionName);
 		
 		$log->setCollection($collectionName);
 		$log->create($argument[0]);
