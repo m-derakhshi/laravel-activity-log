@@ -3,16 +3,16 @@
 namespace mderakhshi\ActivityLog;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 use mderakhshi\Curl\Facades\Log;
 
 class ActivityLogJob implements ShouldQueue {
 	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-	protected $collection;
-	protected $array;
+	protected string $collection;
+	protected array  $array;
 	
 	/**
 	 * Create a new job instance.
@@ -33,7 +33,7 @@ class ActivityLogJob implements ShouldQueue {
 	 */
 	public function handle()
 	{
-		$collectionName       = $this->collection;
+		$collectionName = $this->collection;
 		Log::$collectionName($this->array);
 	}
 }
